@@ -1,0 +1,169 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infos .image {
+  max-width: 26rem;
+}
+
+.infos .image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.infos .names {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.names h1 {
+  font-size: 4.5rem;
+  color: var(--black-950);
+  font-weight: 600;
+  /* margin-bottom: -1rem; */
+  line-height: 3.5rem;
+}
+
+.names p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--principal-500);
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials li {
+  max-width: 3rem;
+  transition: .3s;
+}
+
+.socials li:hover {
+  transform: scale(1.2);
+}
+
+.socials li img,
+.socials li a {
+  width: 100%;
+}
+
+.langs {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.5rem 1.25rem 0.5rem;
+  border-bottom: 0.25rem solid var(--principal-500);
+}
+
+.langs li {
+  max-width: 4rem;
+  padding:  0.5rem;
+  border-radius: 0.75rem;
+  transition: background .3s;
+  position: relative;
+}
+
+.langs li::after {
+  content: attr(data-name);
+  background: var(--principal-500);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--principal-50);
+  font-weight: 600;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%); 
+  transition: all .3s;
+  opacity: 0;
+}
+
+.langs li:hover::after {
+  opacity: 1;
+  top: -40px;
+}
+
+.langs li:hover {
+  background: var(--principal-200);
+}
+
+.langs li img {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--principal-600);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  border: 2px solid var(--principal-600);
+  transition: transform .3s;
+}
+
+.links a:hover {
+  transform: translateY(-10px);
+
+}
+
+.links a img {
+  width: 2rem;
+}
+
+
+@media (max-width: 37.5rem) {
+  .infos .image {
+    max-width: 16rem;
+  }
+
+  .names h1 {
+    font-size: 3.25rem;
+  }
+
+  .names p {
+    font-size: 1.5rem;
+  }
+
+  .langs {
+    gap: auto;
+  }
+
+  .langs li {
+    max-width: 3rem;
+  }
+
+  .links a {
+    font-size: 1.5rem;
+  }
+
+  .links a img {
+    width: 1.5rem;
+  }
+}

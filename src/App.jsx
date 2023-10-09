@@ -1,6 +1,6 @@
 import './App.css';
 import Profile from './components/profile/Profile';
-import About from './components/About/About';
+import About from './components/about/About';
 import Projects from './components/projects/Projects';
 
 function App() {

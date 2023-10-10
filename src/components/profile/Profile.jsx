@@ -13,11 +13,14 @@ import figmaIcon from '../../assets/icons/figma.svg';
 import vscodeIcon from '../../assets/icons/vscode.svg';
 import arrowDownIcon from '../../assets/icons/arrow-down.svg';
 
-const Profile = () => {
+const Profile = ({ setConfetti }) => {
   return (
     <section className="sectionContainer">
       <div className={styles.profile}>
         <div className={styles.infos}>
+          <span className={styles.confetti} onClick={() => setConfetti(true)}>
+            🎉
+          </span>
           <div className={styles.image}>
             <img src={imgProfile} alt="image profile" />
           </div>

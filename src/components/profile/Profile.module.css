@@ -9,6 +9,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.confetti {
+  font-size: 6rem;
+  position: absolute;
+  top: 20rem;
+  left: 20rem;
+  transition: transform .3s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.confetti:hover {
+  transform: scale(.8);
 }
 
 .infos .image {
@@ -139,6 +154,12 @@
 
 
 @media (max-width: 37.5rem) {
+  .confetti {
+    top: 11rem;
+    left: 13rem;
+    font-size: 5rem;
+  }
+
   .infos .image {
     max-width: 16rem;
   }

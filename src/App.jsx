@@ -4,6 +4,7 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Confetti from 'react-confetti';
 import React from 'react';
+import Quotes from './components/quotes/Quotes';
 
 function App() {
   const [confettiOn, setConfettiOn] = React.useState(false);
@@ -14,8 +15,6 @@ function App() {
         <Confetti
           height={1220}
           gravity={0.3}
-          // tweenDuration={1000}
-          // initialVelocityY={60}
           recycle={false}
           onConfettiComplete={() => setConfettiOn(false)}
         />
@@ -25,6 +24,8 @@ function App() {
         <About />
         <Projects />
       </main>
+
+      <Quotes />
 
       <footer>
         <p>Feito de 💝 por Marcos Coelho / 2023</p>
